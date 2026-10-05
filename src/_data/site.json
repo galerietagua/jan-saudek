@@ -1,0 +1,57 @@
+{
+  "title": "Jan Saudek – život a dílo",
+  "description": "Život a dílo fotografa Jana Saudka. Originální ručně kolorované fotografie k prodeji v Galerii Tagua v Praze.",
+  "domain": "jan-saudek.cz",
+
+  "heroKicker": "PRAHA · 1935",
+  "heroText": "Fotograf, který své snímky dokončuje štětcem. Každý tisk je proto originál.",
+  "heroImage": "https://www.galerietagua.cz/content/items/zoom/240.jpg",
+  "heroCaption": "Superwalkman, 1987 · ručně kolorovaná fotografie",
+
+  "storyTitle": "Ze sklepního ateliéru do světových galerií",
+  "storyIntro": "Jan Saudek patří k nejznámějším českým fotografům. Proslavily ho inscenované, ručně kolorované snímky ze sklepního ateliéru s oprýskanou zdí, které dnes najdete ve sbírkách po celém světě.",
+  "timeline": [
+    { "year": "1935", "text": "Narodil se v Praze, spolu s dvojčetem Karlem – pozdějším kreslířem komiksů Kájou Saudkem." },
+    { "year": "[ROK]", "text": "Dlouhá léta pracuje v tiskárně. Fotografuje po večerech a o víkendech." },
+    { "year": "1963", "text": "Katalog výstavy The Family of Man mu ukáže, čím vším může fotografie být." },
+    { "year": "SKLEP", "text": "Ateliérem se stává sklep s oprýskanou zdí – dnes nejslavnější pozadí české fotografie." },
+    { "year": "1984", "text": "Konečně se smí živit jako svobodný umělec." },
+    { "year": "DNES", "text": "Jeho díla visí ve sbírkách po celém světě." }
+  ],
+
+  "techniqueTitle": "Napůl fotografie, napůl obraz",
+  "techniqueImage": "https://www.galerietagua.cz/content/items/zoom/229.jpg",
+  "techniqueSteps": [
+    { "title": "INSCENACE", "text": "Modely, rekvizity a stále stejná zeď. Každý snímek je pečlivě postavená scéna." },
+    { "title": "ČERNOBÍLÝ TISK", "text": "Klasická fotokomora a zvětšenina na fotografický papír." },
+    { "title": "RUČNÍ KOLOROVÁNÍ", "text": "Barvy a retuše přidává Saudek ručně. Dva tisky stejného negativu proto nikdy nejsou stejné." }
+  ],
+
+  "worksTitle": "Vybrané originály z Galerie Tagua",
+  "worksAllUrl": "https://www.galerietagua.cz/prodej/jan-saudek/",
+  "works": [
+    { "title": "Superwalkman", "image": "https://www.galerietagua.cz/content/items/zoom/240.jpg", "size": "31 × 31", "url": "https://www.galerietagua.cz/prodej/superwalkman_240/", "reserved": false },
+    { "title": "Veronique holding a Mirror", "image": "https://www.galerietagua.cz/content/items/zoom/241.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/veronique-holding-a-mirror_241/", "reserved": false },
+    { "title": "Marie Nr. 142", "image": "https://www.galerietagua.cz/content/items/zoom/239.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/marie-nr-142_239/", "reserved": false },
+    { "title": "Hamlet", "image": "https://www.galerietagua.cz/content/items/zoom/202.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/hamlet_202/", "reserved": false },
+    { "title": "Jack & Queen", "image": "https://www.galerietagua.cz/content/items/zoom/188.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/jackqueen_188/", "reserved": false },
+    { "title": "Chains of Love", "image": "https://www.galerietagua.cz/content/items/zoom/184.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/chains-of-love_184/", "reserved": false }
+  ],
+
+  "facts": [
+    { "big": "2×", "text": "Bratr-dvojče Kája Saudek se proslavil jako jeden z nejvýraznějších českých komiksových kreslířů." },
+    { "big": "20 LET", "text": "Některé modelky fotografoval i dvě desetiletí – jeho snímky tak zachycují plynutí času na stejné tváři." },
+    { "big": "♠ ♥", "text": "Vytvořil i sérii fotografií ve stylu hracích karet s jedním nebo dvěma modely." },
+    { "big": "1 ZEĎ", "text": "Oprýskaná zeď sklepního ateliéru se stala jeho podpisem – poznáte ji na desítkách snímků." }
+  ],
+
+  "ctaTitle": "Každé dílo pečlivě ověřujeme, jako bychom ho kupovali do vlastní sbírky.",
+  "ctaText": "Galerie Tagua v centru Prahy. Rádi se s vámi setkáme a dílo ukážeme osobně.",
+
+  "galleryUrl": "https://www.galerietagua.cz/",
+  "street": "Italská 2",
+  "zip": "120 00",
+  "city": "Praha 2",
+  "phone": "+420 602 292 351",
+  "email": "info@galerietagua.cz"
+}

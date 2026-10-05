@@ -1,0 +1,71 @@
+# Editor obsahu pro https://app.pagescms.org – správce tu upravuje texty a díla bez psaní kódu.
+media:
+  input: src/img
+  output: /img
+
+content:
+  - name: site
+    label: Obsah webu
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: title, label: Název stránky (v záložce prohlížeče), type: string, required: true }
+      - { name: description, label: Popis pro Google, type: text, description: "Krátký text, který se zobrazí ve výsledcích vyhledávání." }
+
+      - { name: heroKicker, label: "Úvod – malý nápis nad jménem", type: string }
+      - { name: heroText, label: "Úvod – věta pod jménem", type: text }
+      - { name: heroImage, label: "Úvod – hlavní fotografie", type: image }
+      - { name: heroCaption, label: "Úvod – popisek pod fotografií", type: string }
+
+      - { name: storyTitle, label: "Příběh – nadpis", type: string }
+      - { name: storyIntro, label: "Příběh – úvodní odstavec", type: text }
+      - name: timeline
+        label: "Příběh – časová osa"
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Rok (nebo krátké slovo), type: string, required: true }
+          - { name: text, label: Text, type: text, required: true }
+
+      - { name: techniqueTitle, label: "Jak vzniká – nadpis", type: string }
+      - { name: techniqueImage, label: "Jak vzniká – fotografie", type: image, description: "Když je prázdné, zobrazí se jen text." }
+      - name: techniqueSteps
+        label: "Jak vzniká – kroky"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Název kroku, type: string, required: true }
+          - { name: text, label: Popis, type: text }
+
+      - { name: worksTitle, label: "Díla – nadpis", type: string }
+      - { name: worksAllUrl, label: "Díla – odkaz na všechna díla Saudka v galerii", type: string }
+      - name: works
+        label: "Díla k prodeji"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Název díla, type: string, required: true }
+          - { name: url, label: Odkaz na dílo v Galerii Tagua, type: string, required: true, description: "Na galerietagua.cz otevřete dílo a zkopírujte adresu z prohlížeče." }
+          - { name: image, label: Fotografie díla, type: image, required: true }
+          - { name: size, label: Rozměr (cm), type: string, description: "např. 31 × 31. Když je prázdné, nezobrazí se." }
+          - { name: reserved, label: Rezervováno / prodáno, type: boolean, description: "Zobrazí štítek REZERVOVÁNO a odkaz povede na ostatní díla." }
+
+      - name: facts
+        label: Zajímavosti
+        type: object
+        list: true
+        fields:
+          - { name: big, label: Velký nápis, type: string, description: "Krátce, např. 1935 nebo 2×" }
+          - { name: text, label: Text, type: text, required: true }
+
+      - { name: ctaTitle, label: "Výzva dole – nadpis", type: text }
+      - { name: ctaText, label: "Výzva dole – text", type: text }
+
+      - { name: galleryUrl, label: Web galerie, type: string }
+      - { name: street, label: Ulice a číslo, type: string }
+      - { name: zip, label: PSČ, type: string }
+      - { name: city, label: Město, type: string }
+      - { name: phone, label: Telefon, type: string }
+      - { name: email, label: E-mail, type: string }
+      - { name: domain, label: Doména, type: string, description: "Bez https://. Tohle neměňte, pokud neměníte doménu." }

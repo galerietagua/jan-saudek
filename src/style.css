@@ -1,0 +1,137 @@
+:root {
+  --ground: #F7F5F1;
+  --band: #EFEBE5;
+  --line: #DDD7CE;
+  --tile: #E3DDD3;
+  --ink: #1A1816;
+  --ink-2: #3A3530;
+  --ink-3: #4A443D;
+  --muted: #6B645B;
+  --faint: #B8B0A5;
+  --accent: #1F7A5A;
+  --accent-dark: #145A42;
+  --cond: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: 'Barlow', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dark); }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { margin: 0; font-family: var(--cond); }
+p { margin: 0; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.section { padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px; }
+.band { background: var(--band); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.rule { border-top: 1px solid var(--line); }
+.muted { color: var(--ink-3); }
+.small { font-size: 15px; color: var(--muted); }
+
+.kicker { font-family: var(--cond); font-size: 17px; letter-spacing: 0.3em; color: var(--accent); }
+.head { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+.head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; }
+h2 { font-weight: 600; font-size: 64px; line-height: 1; }
+.h2--sm { font-size: 48px; line-height: 1.05; }
+.big { font-family: var(--cond); font-weight: 700; font-size: 44px; color: var(--accent); line-height: 1; }
+
+/* Tlačítka */
+.btn {
+  font-family: var(--cond); font-weight: 600; font-size: 18px; letter-spacing: 0.14em;
+  padding: 14px 28px; min-height: 48px; display: inline-flex; align-items: center;
+}
+.btn--accent { background: var(--accent); color: #fff; }
+.btn--accent:hover { background: var(--accent-dark); color: #fff; }
+.btn--ghost { color: var(--ink); border: 1px solid var(--faint); }
+.btn--ghost:hover { color: var(--ink); border-color: var(--ink); }
+.btn--ghost-accent { color: var(--accent); border: 1px solid var(--accent); padding: 10px 18px; min-height: 44px; font-size: 17px; font-weight: 400; letter-spacing: 0.12em; }
+.btn--lg { padding: 16px 32px; min-height: 52px; }
+.btns { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
+.link-cta { font-family: var(--cond); font-weight: 600; font-size: 17px; letter-spacing: 0.12em; min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Hlavička */
+.top { border-bottom: 1px solid var(--line); }
+.top__in { padding-top: 20px; padding-bottom: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.logo { color: var(--ink); font-family: var(--cond); font-weight: 600; font-size: 22px; letter-spacing: 0.32em; }
+.logo:hover { color: var(--ink); }
+.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-family: var(--cond); font-size: 17px; letter-spacing: 0.12em; }
+.nav a:not(.btn) { color: var(--ink-3); }
+.nav a:not(.btn):hover { color: var(--ink); }
+
+/* Úvod */
+.hero { padding-top: 96px; padding-bottom: 120px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px; }
+.hero__text { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+.hero h1 { font-weight: 700; font-size: 128px; line-height: 0.88; letter-spacing: 0.01em; }
+.lead { font-size: 24px; line-height: 1.45; color: var(--ink-2); max-width: 30ch; }
+.hero__fig { flex: 1 1 400px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.hero__fig figcaption { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
+
+/* Paspartu – dílo se nikdy neořízne */
+.mat { display: block; background: #fff; padding: 16px; position: relative; box-shadow: 0 12px 32px rgba(60, 45, 30, 0.10); }
+.mat--lg { padding: 20px; box-shadow: 0 30px 80px rgba(60, 45, 30, 0.14); }
+.frame { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #fff; }
+.frame--square { aspect-ratio: 1 / 1; }
+
+/* Příběh */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; background: var(--line); }
+.timeline li { background: var(--band); padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; color: var(--ink-2); }
+
+/* Technika */
+.technique { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 64px; }
+.technique__img { flex: 1 1 360px; min-width: 0; }
+.technique__text { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 32px; }
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 28px; }
+.steps li { display: flex; gap: 24px; }
+.steps__n { font-family: var(--cond); font-weight: 300; font-size: 48px; line-height: 1; color: var(--faint); flex: 0 0 56px; }
+.steps__t { font-family: var(--cond); font-weight: 600; font-size: 24px; letter-spacing: 0.06em; }
+
+/* Díla */
+.works { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 48px 40px; }
+.work { display: flex; flex-direction: column; gap: 18px; }
+.work__img { transition: box-shadow .2s, transform .2s; }
+.work__img:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(60, 45, 30, 0.16); }
+.work h3 { font-weight: 600; font-size: 28px; letter-spacing: 0.02em; line-height: 1.15; }
+.work__foot { border-top: 1px solid var(--line); padding-top: 4px; }
+.badge { position: absolute; top: 28px; left: 28px; background: var(--ink); color: #fff; font-family: var(--cond); font-weight: 600; font-size: 14px; letter-spacing: 0.14em; padding: 6px 12px; }
+
+/* Zajímavosti */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.fact { border: 1px solid var(--line); padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; color: var(--ink-2); }
+.fact .big { font-size: 40px; }
+
+/* Výzva */
+.cta { padding-top: 96px; padding-bottom: 96px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; }
+.cta__text { flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+
+/* Patička */
+.foot { padding-top: 56px; padding-bottom: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px; }
+.tagua { display: flex; flex-direction: column; align-items: center; border: 2px solid var(--accent); padding: 10px 22px; color: var(--ink); }
+.tagua:hover { color: var(--ink); }
+.tagua__name { font-family: Georgia, 'Times New Roman', serif; font-size: 28px; letter-spacing: 0.06em; line-height: 1; }
+.tagua__sub { font-family: var(--cond); font-weight: 600; font-size: 12px; letter-spacing: 0.5em; margin-top: 4px; }
+.foot__info { display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 15px; color: var(--ink-3); }
+.foot__info a { color: var(--ink-3); }
+
+/* Mobil */
+@media (max-width: 720px) {
+  .section { padding-top: 72px; padding-bottom: 72px; gap: 40px; }
+  .hero { padding-top: 48px; padding-bottom: 72px; gap: 40px; }
+  .hero h1 { font-size: 84px; }
+  .lead { font-size: 20px; }
+  h2 { font-size: 44px; }
+  .h2--sm { font-size: 34px; }
+  .technique { gap: 40px; }
+  .nav { gap: 4px 20px; }
+  .nav a:not(.btn) { min-height: 44px; display: inline-flex; align-items: center; }
+  .works { grid-template-columns: 1fr; }
+  .cta { padding-top: 64px; padding-bottom: 64px; }
+}

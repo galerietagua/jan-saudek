@@ -1,0 +1,177 @@
+---
+permalink: /index.html
+---
+{%- set s = site -%}
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ s.title }}</title>
+<meta name="description" content="{{ s.description }}">
+<meta name="theme-color" content="#F7F5F1">
+{%- if s.domain %}
+<link rel="canonical" href="https://{{ s.domain }}/">
+<meta property="og:url" content="https://{{ s.domain }}/">
+{%- endif %}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ s.title }}">
+<meta property="og:description" content="{{ s.description }}">
+{%- if s.heroImage %}
+<meta property="og:image" content="{{ s.heroImage | src }}">
+{%- endif %}
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jan Saudek",
+  "birthDate": "1935-05-13",
+  "birthPlace": "Praha",
+  "jobTitle": "Fotograf",
+  "nationality": "Czech"
+}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a href="#top" class="logo">JAN SAUDEK</a>
+    <nav aria-label="Hlavní menu" class="nav">
+      <a href="#pribeh">PŘÍBĚH</a>
+      <a href="#technika">JAK VZNIKÁ</a>
+      <a href="#dila">DÍLA</a>
+      <a href="#zajimavosti">ZAJÍMAVOSTI</a>
+      <a href="{{ s.galleryUrl }}" class="btn btn--ghost-accent">GALERIE TAGUA</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="top" class="wrap hero">
+    <div class="hero__text">
+      <div class="kicker">{{ s.heroKicker }}</div>
+      <h1>JAN<br>SAUDEK</h1>
+      <p class="lead">{{ s.heroText }}</p>
+      <div class="btns">
+        <a href="#dila" class="btn btn--accent">PROHLÉDNOUT DÍLA</a>
+        <a href="#pribeh" class="btn btn--ghost">JEHO PŘÍBĚH</a>
+      </div>
+    </div>
+    {%- if s.heroImage %}
+    <figure class="hero__fig">
+      <div class="mat mat--lg"><img src="{{ s.heroImage | src }}" alt="{{ s.heroCaption }}" class="frame frame--hero" fetchpriority="high"></div>
+      {%- if s.heroCaption %}<figcaption>{{ s.heroCaption }}</figcaption>{% endif %}
+    </figure>
+    {%- endif %}
+  </section>
+
+  <section id="pribeh" class="band">
+    <div class="wrap section">
+      <div class="head">
+        <div class="kicker">01 — PŘÍBĚH</div>
+        <h2>{{ s.storyTitle }}</h2>
+        <p class="muted">{{ s.storyIntro }}</p>
+      </div>
+      <ol class="timeline">
+        {%- for t in s.timeline %}
+        <li><div class="big">{{ t.year }}</div><div>{{ t.text }}</div></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section id="technika" class="wrap section technique">
+    {%- if s.techniqueImage %}
+    <div class="mat technique__img"><img src="{{ s.techniqueImage | src }}" alt="" class="frame frame--square" loading="lazy"></div>
+    {%- endif %}
+    <div class="technique__text">
+      <div class="head">
+        <div class="kicker">02 — JAK VZNIKÁ SAUDKOVA FOTOGRAFIE</div>
+        <h2>{{ s.techniqueTitle }}</h2>
+      </div>
+      <ol class="steps">
+        {%- for st in s.techniqueSteps %}
+        <li><span class="steps__n">{{ loop.index }}</span><div><div class="steps__t">{{ st.title }}</div><div class="muted">{{ st.text }}</div></div></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section id="dila" class="band">
+    <div class="wrap section">
+      <div class="head-row">
+        <div class="head">
+          <div class="kicker">03 — DÍLA K MÁNÍ</div>
+          <h2>{{ s.worksTitle }}</h2>
+        </div>
+        <a href="{{ s.worksAllUrl }}" class="link-cta">VŠECHNA DÍLA V GALERII →</a>
+      </div>
+      <div class="works">
+        {%- for w in s.works %}
+        <article class="work">
+          <a href="{{ w.url or s.worksAllUrl }}" class="mat work__img" aria-label="{{ w.title }} – zobrazit v Galerii Tagua">
+            <img src="{{ w.image | src }}" alt="Jan Saudek: {{ w.title }}" class="frame" loading="lazy">
+            {%- if w.reserved %}<span class="badge">REZERVOVÁNO</span>{% endif %}
+          </a>
+          <div>
+            <h3>{{ w.title }}</h3>
+            <div class="small muted">Originální fotografie{% if w.size %} · {{ w.size }} cm{% endif %}</div>
+          </div>
+          <div class="work__foot">
+            {%- if w.reserved %}
+            <a href="{{ s.worksAllUrl }}" class="link-cta">PODOBNÁ DÍLA →</a>
+            {%- else %}
+            <a href="{{ w.url or s.worksAllUrl }}" class="link-cta">ZOBRAZIT V GALERII →</a>
+            {%- endif %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="zajimavosti" class="wrap section">
+    <div class="head">
+      <div class="kicker">04 — VĚDĚLI JSTE?</div>
+      <h2>Zajímavosti</h2>
+    </div>
+    <div class="facts">
+      {%- for f in s.facts %}
+      <div class="fact"><div class="big">{{ f.big }}</div><div>{{ f.text }}</div></div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap cta">
+      <div class="cta__text">
+        <h2 class="h2--sm">{{ s.ctaTitle }}</h2>
+        <p class="muted">{{ s.ctaText }}</p>
+      </div>
+      <a href="{{ s.galleryUrl }}" class="btn btn--accent btn--lg">NAVŠTÍVIT GALERII TAGUA</a>
+    </div>
+  </section>
+</main>
+
+<footer class="band">
+  <div class="wrap foot">
+    <a href="{{ s.galleryUrl }}" class="tagua" aria-label="Galerie Tagua">
+      <span class="tagua__name">TAGUA</span>
+      <span class="tagua__sub">GALERIE</span>
+    </a>
+    <div class="foot__info">
+      <span>{{ s.street }}, {{ s.zip }} {{ s.city }}</span>
+      <a href="tel:{{ s.phone | tel }}">{{ s.phone }}</a>
+      <a href="mailto:{{ s.email }}">{{ s.email }}</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
