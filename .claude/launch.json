@@ -1,6 +1,0 @@
-{
-  "version": "0.0.1",
-  "configurations": [
-    { "name": "jan-saudek", "runtimeExecutable": "sh", "runtimeArgs": ["-c", "cd /Users/eliska/Projects/jan-saudek && npx eleventy --serve --port=8091"], "port": 8091 }
-  ]
-}
