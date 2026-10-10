@@ -19,7 +19,7 @@ permalink: /index.html
 <meta property="og:title" content="{{ s.title }}">
 <meta property="og:description" content="{{ s.description }}">
 {%- if s.heroImage %}
-<meta property="og:image" content="{{ s.heroImage | src }}">
+<meta property="og:image" content="{% if s.domain and not (s.heroImage | src).startsWith('http') %}https://{{ s.domain }}{% endif %}{{ s.heroImage | src }}">
 {%- endif %}
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">

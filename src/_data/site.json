@@ -5,7 +5,7 @@
 
   "heroKicker": "PRAHA · 1935",
   "heroText": "Fotograf, který své snímky dokončuje štětcem. Každý tisk je proto originál.",
-  "heroImage": "https://www.galerietagua.cz/content/items/zoom/240.jpg",
+  "heroImage": "/img/saudek-superwalkman.jpg",
   "heroCaption": "Superwalkman, 1987 · ručně kolorovaná fotografie",
 
   "storyTitle": "Ze sklepního ateliéru do světových galerií",
@@ -20,7 +20,7 @@
   ],
 
   "techniqueTitle": "Napůl fotografie, napůl obraz",
-  "techniqueImage": "https://www.galerietagua.cz/content/items/zoom/229.jpg",
+  "techniqueImage": "/img/saudek-kitsch.jpg",
   "techniqueSteps": [
     { "title": "INSCENACE", "text": "Modely, rekvizity a stále stejná zeď. Každý snímek je pečlivě postavená scéna." },
     { "title": "ČERNOBÍLÝ TISK", "text": "Klasická fotokomora a zvětšenina na fotografický papír." },
@@ -30,12 +30,12 @@
   "worksTitle": "Vybrané originály z Galerie Tagua",
   "worksAllUrl": "https://www.galerietagua.cz/prodej/jan-saudek/",
   "works": [
-    { "title": "Superwalkman", "image": "https://www.galerietagua.cz/content/items/zoom/240.jpg", "size": "31 × 31", "url": "https://www.galerietagua.cz/prodej/superwalkman_240/", "reserved": false },
-    { "title": "Veronique holding a Mirror", "image": "https://www.galerietagua.cz/content/items/zoom/241.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/veronique-holding-a-mirror_241/", "reserved": false },
-    { "title": "Marie Nr. 142", "image": "https://www.galerietagua.cz/content/items/zoom/239.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/marie-nr-142_239/", "reserved": false },
-    { "title": "Hamlet", "image": "https://www.galerietagua.cz/content/items/zoom/202.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/hamlet_202/", "reserved": false },
-    { "title": "Jack & Queen", "image": "https://www.galerietagua.cz/content/items/zoom/188.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/jackqueen_188/", "reserved": false },
-    { "title": "Chains of Love", "image": "https://www.galerietagua.cz/content/items/zoom/184.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/chains-of-love_184/", "reserved": false }
+    { "title": "Superwalkman", "image": "/img/saudek-superwalkman.jpg", "size": "31 × 31", "url": "https://www.galerietagua.cz/prodej/superwalkman_240/", "reserved": false },
+    { "title": "Veronique holding a Mirror", "image": "/img/saudek-veronique-holding-a-mirror.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/veronique-holding-a-mirror_241/", "reserved": false },
+    { "title": "Marie Nr. 142", "image": "/img/saudek-marie-nr-142.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/marie-nr-142_239/", "reserved": false },
+    { "title": "Hamlet", "image": "/img/saudek-hamlet.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/hamlet_202/", "reserved": false },
+    { "title": "Jack & Queen", "image": "/img/saudek-jack-and-queen.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/jackqueen_188/", "reserved": false },
+    { "title": "Chains of Love", "image": "/img/saudek-chains-of-love.jpg", "size": "", "url": "https://www.galerietagua.cz/prodej/chains-of-love_184/", "reserved": false }
   ],
 
   "facts": [
