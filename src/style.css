@@ -114,10 +114,9 @@ h2 { font-weight: 600; font-size: 64px; line-height: 1; }
 
 /* Patička */
 .foot { padding-top: 56px; padding-bottom: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px; }
-.tagua { display: flex; flex-direction: column; align-items: center; border: 2px solid var(--accent); padding: 10px 22px; color: var(--ink); }
-.tagua:hover { color: var(--ink); }
-.tagua__name { font-family: Georgia, 'Times New Roman', serif; font-size: 28px; letter-spacing: 0.06em; line-height: 1; }
-.tagua__sub { font-family: var(--cond); font-weight: 600; font-size: 12px; letter-spacing: 0.5em; margin-top: 4px; }
+.tagua { display: block; background: var(--ink); padding: 14px 18px; transition: opacity .2s; }
+.tagua:hover { opacity: .85; }
+.tagua img { width: 200px; height: auto; }
 .foot__info { display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 15px; color: var(--ink-3); }
 .foot__info a { color: var(--ink-3); }
 
